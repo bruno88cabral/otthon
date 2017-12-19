@@ -1,0 +1,49 @@
+.icon-sobre{
+	background-image: url('../img/servicos.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: #eee;
+	padding: 30px 0;
+	@media(min-width: map-get($grid-breakpoints,lg)){
+		padding: 30px 20%;
+	}
+	.container-icon-sobre{
+		@extend .col-xs-12;
+		@extend .col-md-3;
+		@include flipInY(
+			$duration: 2s
+			);
+		margin: 15px 0;
+		.losango{
+			margin: 0 auto;
+			border: 1px solid #aaa;
+			width: 50px;
+			height: 50px;
+			text-align: center;
+			transform: rotate(-45deg); 
+			.fa{
+				color: #fcca03;
+				font-size: 1.5rem;
+				line-height: 50px;
+				transform: rotate(45deg); 
+			}
+		}
+		.titulo-icon-sobre{
+			font-size: .75rem;
+		    text-align: center;
+		    margin-top: 1.5rem;
+		    text-transform: uppercase;
+		    font-weight: bold;
+		}
+		.p-icon-sobre{
+			text-align: center;
+		    color: #aaa;
+		    font-size: 0.7rem;
+		    padding: 0 20px;
+		    @media(min-width: map-get($grid-breakpoints,lg)){
+				margin-bottom: 0;
+			}
+		}
+	} 
+}

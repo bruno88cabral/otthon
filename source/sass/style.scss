@@ -1,0 +1,81 @@
+@import "../components/bootstrap/scss/bootstrap.scss";
+@import "../components/components-font-awesome/scss/font-awesome.scss";
+@import "../components/animate/animate.scss";
+
+@import "header";
+@import "home";
+@import "nosso-servico";
+@import "porque-home";
+@import "ajuda";
+@import "ultimos-projetos";
+@import "video";
+@import "footer";
+@import "titulo-page";
+@import "quem-somos";
+@import "icon-sobre";
+@import "sonhos";
+@import "icon-sobre-2";
+@import "diferencial";
+@import "equipe";
+@import "servicos";
+@import "financiamento";
+@import "politica";
+@import "contato";
+
+@font-face {
+    font-family: "Raleway";
+    src: url(../fonts/Raleway-ExtraBold.ttf);
+}
+@font-face {
+    font-family: "Raleway-semibold";
+    src: url(../fonts/Raleway-SemiBold.ttf);
+}
+@font-face {
+    font-family: "Raleway-Medium";
+    src: url(../fonts/Raleway-Medium.ttf);
+}
+h2, h3, h4, h5, h6{
+	font-family: "Raleway";
+}
+p{
+	font-family: "Raleway-Medium";
+}
+.up-to-top{
+	position: fixed;
+	bottom: 10px;
+	right: -30%;
+	background-color: #c0392b;
+    border-radius: 50%;
+	z-index: 99;
+	@include transition (right .5s, background-color .5s);
+	&:hover{
+		background-color: darken(#008fcb, 15%);
+		cursor: pointer;
+	}
+	@media(min-width: map-get($grid-breakpoints,md)){
+		padding: 10px;
+		bottom: 20px;
+	}
+	@media(min-width: map-get($grid-breakpoints,lg)){
+		padding: 5px;
+	}
+	.fa{
+		color: #fff;
+		font-size: 1.5rem;
+		padding: 2px 4px 7px 4px;
+	}
+}
+
+.appear-up-to-top{
+	.up-to-top{
+		right: 10px;
+		@media(min-width: map-get($grid-breakpoints,md)){
+			padding: 10px;
+			right: 20px;
+			bottom: 20px;
+		}
+		@media(min-width: map-get($grid-breakpoints,lg)){
+			padding: 5px;
+		}
+	}	
+}

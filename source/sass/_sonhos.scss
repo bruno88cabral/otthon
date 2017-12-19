@@ -1,0 +1,79 @@
+.sonhos{
+	padding: 20px 0;
+	@media(min-width: map-get($grid-breakpoints,lg)){
+		padding-top: 60px;
+		padding-bottom: 0;
+	}
+	.container-sonhos{
+		@extend .col-xs-12;
+		&:first-child,
+		&:last-child{
+			@extend .col-md-5;
+		}
+		&:nth-child(2){
+			@extend .col-md-2;
+		}
+		&:first-child{
+			@include fadeInLeftBig();
+		}
+		&:last-child{
+			@include fadeInRightBig();
+		}
+		.titulo-sonhos-1{
+			text-transform: uppercase;
+	    	font-size: 1.5rem;
+	    	font-weight: bold;
+		}
+		.tracinho-sonho-1{
+			margin: 20px 50% 20px 0;
+	    	border-bottom: solid 6px #008fcb;
+	    	width: 40px;
+		}
+		.p-sonhos-1{
+			margin-bottom: 0;
+			font-size: .9rem;
+		}
+		.img-sonhos{
+			@include fadeInUp();
+			width: 100%;
+			margin-top: 2rem;
+			margin-bottom: 2rem;
+			@media(min-width: map-get($grid-breakpoints,md)){
+				width: 135%;
+			    height: 475px;
+			    margin-left: -1rem;
+			    margin-top: 8rem;
+			    margin-bottom: 0;
+			}
+			@media(min-width: map-get($grid-breakpoints,lg)){
+				width: 145%;
+			    height: 475px;
+			    margin-left: -2rem;
+			    margin-top: 0;
+			    margin-bottom: 0;
+			}  
+		}
+		.titulo-sonhos-2{
+			text-transform: uppercase;
+	    	font-size: 1.5rem;
+	    	font-weight: bold;
+	    	text-align: right;
+		}
+		.tracinho-sonho-2{
+			margin: 20px 0 20px 85%;
+	    	border-bottom: solid 6px #008fcb;
+	    	width: 40px;
+	    	@media(min-width: map-get($grid-breakpoints,lg)){
+				margin: 20px 0 20px 91%;
+			}
+			@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+				margin: 20px 0 20px 89%;
+			}
+		}
+		.p-sonhos-2{
+			margin-bottom: 0;
+			font-size: .9rem;
+			text-align: right;
+		}
+	}
+}

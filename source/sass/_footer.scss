@@ -1,0 +1,129 @@
+footer{
+	background-image: url('../img/footer.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: #ddd;
+	.container{
+		&:first-child{	
+			@media(min-width: map-get($grid-breakpoints,lg)){
+				padding: 5% 5%;
+			}
+		}
+		&:last-child{	
+			@media(min-width: map-get($grid-breakpoints,lg)){
+				padding: 0 5%;
+			}
+		}
+	}
+	.container-footer{
+		@extend .col-xs-12;
+		@extend .col-md-3;
+		text-align: center;
+		margin-bottom: 20px;
+		&:last-child{
+			text-align: left;
+		}
+		.img-footer{
+			max-width: 80%;
+			margin-top: 1rem;
+		}
+		.titulo-footer{
+			text-transform: uppercase;
+		    text-align: left;
+		    font-size: 1rem;
+		    font-weight: bold;
+		    margin-top: 20px;
+		    font-family: "Raleway-semibold";
+		    &:nth-child(4){
+		    	font-size: .9rem;
+		    }
+		}
+		.tracinho-footer{
+			margin: 5px 50% 20px 0;
+	    	border-bottom: solid 6px #008fcb;
+	    	width: 40px;
+		}
+		.list-footer{
+			list-style-type: none;
+    		text-align: left;
+    		padding-left: 0;
+    		margin-bottom: 0;
+    		.item-footer{
+				padding-bottom: 10px;
+				font-size: .9rem;
+    		}
+		}
+		.input-footer{
+			background: transparent;
+    		border: solid 2px #008fcb;
+    		width: 50%;
+    		color: #ddd;
+		}
+		.box-input{
+			margin-left: -5px;
+			padding: 3.5px 5px 5.5px;
+			background-color: #008fcb;
+		}
+		.enviar-footer{
+			border:none;
+			color:#ddd;			
+			background: none;
+			border-color: #008fcb;
+		}
+	}
+	.copy{
+		border-top: 1px solid #777;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		.p-footer{
+			@media(min-width: map-get($grid-breakpoints,md)){
+				display: inline;
+				&:last-child{
+					margin-left: 7rem;
+				}
+			}
+			@media(min-width: map-get($grid-breakpoints,lg)){
+				&:last-child{
+					margin-left: 40%;
+				}
+			}
+			.rpm{
+				width: 15%;
+				&:hover{
+					@include rotateIn(
+						$duration: .5s
+						);
+				}
+				@media(min-width: map-get($grid-breakpoints,md)){
+					width: 5%;
+				}
+			}
+			.fa{
+				font-size: 1.5rem;
+				margin: 0 8%;
+				@include transition(.3s);
+				&:hover{
+					color: #008fcb;
+				}
+				@media(min-width: map-get($grid-breakpoints,md)){
+					margin: 0 2%;
+				}
+				@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+					margin: 0 1%;
+				}
+			}
+		} 
+	}
+}
+input:focus,
+textarea:focus{
+	outline: none !important;
+    border:1px solid #fcca03;
+    box-shadow: 0 0 10px #fcca03;
+}
+.input-footer:focus{
+	outline: none !important;
+    border: 2px solid #008fcb !important;
+    box-shadow: 0 0 10px #008fcb !important;
+}

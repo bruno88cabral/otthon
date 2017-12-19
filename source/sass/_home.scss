@@ -1,0 +1,65 @@
+.home-index{
+	background-image: url('../img/banner.png');
+	background-repeat: no-repeat;
+	background-size: cover;	
+    background-position: center;
+	color: #fff;
+	text-align: center;
+	padding-bottom: 10%;
+	@media(min-width: map-get($grid-breakpoints,md)){
+		text-align: left;
+		padding-bottom: 0;
+	}
+	@media(min-width: map-get($grid-breakpoints,lg)){
+		padding-bottom: 5%;
+	} 
+	.frase-home{
+		font-size: 1.5rem;
+		padding-top:100px;
+		padding-bottom: 20px;
+		font-weight: bold;
+		@media(min-width: map-get($grid-breakpoints,md)){
+			font-size: 3.6rem;
+			padding-top: 193px;
+		}
+		@media(min-width: map-get($grid-breakpoints,lg)){
+			font-size: 5rem;
+			padding-top: 34%;
+		}
+	}
+	.frase-home-1{		
+		padding-bottom: 1rem;
+		font-size: .8rem;
+		font-family: inherit;
+		@media(min-width: map-get($grid-breakpoints,md)){
+			font-size: 1.1rem;
+		}
+		@media(min-width: map-get($grid-breakpoints,lg)){
+			font-size: 1.5rem;
+		}  
+	}
+	.link-home{
+		color: #fff;
+		font-family: "Raleway-semibold";
+		text-transform: uppercase;
+		padding: 10px 40px;
+		border: 1px solid #fff;
+		@include transition (.3s);
+		&:hover{
+			background-color: #fff;
+			color: #000;
+			text-decoration: none;
+		}
+		@media(min-width: map-get($grid-breakpoints,md)){
+			display: inline;
+    		float: right;
+    		margin-top: -4rem;
+		}
+		@media(min-width: map-get($grid-breakpoints,lg)){
+			margin-right: 19%;
+		}
+		@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+			margin-right: 0;
+		}
+	}
+}

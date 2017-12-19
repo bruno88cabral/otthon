@@ -1,0 +1,108 @@
+.porque-home{
+	background-image: url('../img/porque_otthon.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	color: #fff;
+	padding: 30px 0;
+	@media(min-width: map-get($grid-breakpoints,lg)){
+		padding: 12% 0;
+	}
+	.container-porque{
+		@extend .col-xs-12;
+		@extend .col-md-6;
+		&:last-child{
+			@media(min-width: map-get($grid-breakpoints,md)){
+				margin-top: 5.5rem;
+			}
+			@media(min-width: map-get($grid-breakpoints,lg)){
+				margin-top: 0;
+			}
+		}	
+		.titulo-porque{
+			text-transform: uppercase;
+	    	font-size: 1.5rem;
+	    	font-weight: bold;
+	    	@media(min-width: map-get($grid-breakpoints,md)){
+				font-size: 1.406rem;
+			}
+		}
+		.tracinho-porque{
+			margin: 30px 50% 30px 0;
+	    	border-bottom: solid 6px #008fcb;
+	    	width: 40px;
+		}
+		.p-porque{
+			line-height: 1.2;
+			@include fadeIn();
+		}
+		.row-porque{
+			.container-icon-porque{
+				@extend .col-xs-12;
+				@extend .col-lg-6;
+				margin: 10px 0;
+				@include fadeInUp(
+					$delay: .5s
+					);
+				@media(min-width: map-get($grid-breakpoints,md)){
+					padding-left: 0;
+				}
+				.icon-porque{
+					@extend .col-xs-3;
+					background-color: #008fcb;
+					height: 65px;
+					width: 65px;
+					text-align: center;
+					@include transition(.3s);
+					&:hover{
+						background-color: #fff;
+						color: #008fcb;						
+					}
+					@media(min-width: map-get($grid-breakpoints,lg)){
+						height: 60px;
+						width: 60px;
+					}
+					@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+						height: 50px;
+						width: 50px;
+					}
+					.fa{
+						font-size: 1.6rem;
+	                    line-height: 65px;
+	                    @include transition(.3s);
+						@media(min-width: map-get($grid-breakpoints,lg)){
+							line-height: 60px;
+						}
+						@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+							line-height: 50px;
+						}
+					}  
+				}
+				.texto-icon{
+					@extend .col-xs-9; 
+					.titulo-texto{
+						font-size: 1rem;
+	    				margin-bottom: 0;
+	    				text-transform: uppercase;
+	    				font-weight: bold;
+	    				@media(min-width: map-get($grid-breakpoints,lg)){
+							font-size: .9rem;
+						}
+					}
+					.p-texto-icon{
+						line-height: 1;
+						font-size: .9rem;
+						@media(min-width: map-get($grid-breakpoints,lg)){
+							font-size: .7rem;
+						}
+					}
+				}
+			}
+		}
+		.img-porque{
+			@extend .img-fluid;
+			@include zoomIn();
+			margin-bottom: 1rem;
+		}
+	}
+}

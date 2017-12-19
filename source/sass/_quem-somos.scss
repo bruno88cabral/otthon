@@ -1,0 +1,41 @@
+.quem-somos{
+	padding: 20px 0;
+	background-color: #ededdd;
+	@media(min-width: map-get($grid-breakpoints,lg)){
+		padding: 70px 0 30px 0;
+	}  
+	.container-quem-somos{
+		@extend .col-xs-12;
+		@extend .col-md-6;
+		&:first-child{
+			@include fadeInLeftBig();
+		}
+		&:last-child{
+			@include fadeInRightBig();
+		}
+		.titulo-quem-somos{
+			text-transform: uppercase;
+	    	font-size: 1.5rem;
+	    	font-weight: bold;
+		}
+		.tracinho-quem-somos{
+			margin: 20px 50% 20px 0;
+	    	border-bottom: solid 6px #008fcb;
+	    	width: 40px;
+		}
+		.p-quem-somos{
+			margin-bottom: 0;
+			font-size: .9rem;
+		}
+		.img-quem-somos{			
+			width: 100%;
+			margin-top: 2rem;
+			@media(min-width: map-get($grid-breakpoints,md)){
+				margin-top: 40%;
+			}
+			@media(min-width: map-get($grid-breakpoints,lg)){
+				margin-top: 0;
+			}  
+		}
+	}
+}

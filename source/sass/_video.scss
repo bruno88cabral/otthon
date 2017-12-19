@@ -1,0 +1,34 @@
+.video{
+	text-align: center;
+	color: #fff;
+	background-color: #008fcb;
+	padding: 40px 0;
+	font-family: "Raleway-semibold";
+	position: relative;
+	z-index: 10;
+
+	.p-video-1{
+		text-transform: uppercase;
+		font-size: .95rem;
+		@media(min-width: map-get($grid-breakpoints,lg)){
+			font-size: 1.3rem;		
+		} 
+	}
+	.fa-play-circle-o{
+		font-size: 2rem;
+		@include transition(.3s);
+		@include rotateIn();
+		&:hover{
+			color: darken(#008fcb, 25%);
+		}
+	}
+	.p-video-2{
+		margin-top: 1rem;
+		margin-bottom: 0;
+		text-transform: uppercase;
+		font-size: .8rem;
+		@media(min-width: map-get($grid-breakpoints,lg)){
+			font-size: 1rem;		
+		} 
+	}
+}

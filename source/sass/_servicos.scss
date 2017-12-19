@@ -1,0 +1,71 @@
+.servicos{
+	background-image: url('../img/servicos.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: #fff;
+	padding: 20px 0;
+	.titulo-servico{
+		text-align: center;
+    	font-size: 1.5rem;
+    	font-weight: bold;
+    	text-transform: uppercase;
+	}
+	.tracinho-servico{
+		margin: 10px auto;
+    	border-bottom: solid 6px #008fcb;
+    	width: 40px;
+    	@media(min-width: map-get($grid-breakpoints,md)){
+			margin: 10px auto 100px auto;
+		}
+		@media(min-width: map-get($grid-breakpoints,md)){
+			margin: 10px auto 120px auto;
+		}
+	}
+}
+.servicos-row{
+	.container-servicos{
+		@extend .col-xs-12;
+		@extend .col-md-4;
+		text-align: center;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		.img-servicos{
+			width: 80%;
+			margin: 20px 0;
+			@include rollIn();
+		}
+		.titulo-servicos{
+			font-size: 1.7rem;
+   			font-weight: bold;
+   			color: #000;
+    		margin-bottom: 1.5rem;
+    		@include slideInUp(
+				$duration: 1s
+    			);
+		}
+		.p-servicos{
+			margin-bottom: 0;
+    		font-size: .9rem;
+    		@include slideInUp(
+				$duration: 1s
+    			);
+    		@media(min-width: map-get($grid-breakpoints,md)){
+				text-align: justify;
+    			line-height: 1;
+			}
+			@media(min-width: map-get($grid-breakpoints,md)){
+				text-align: justify;
+    			line-height: 1.2;
+			}
+		}
+	}
+}
+#negative{
+	@media(min-width: map-get($grid-breakpoints,md)){
+		margin-top: -18%;
+	}
+	@media(min-width: map-get($grid-breakpoints,lg)){
+		margin-top: -14%;
+	}
+}

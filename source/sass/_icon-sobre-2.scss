@@ -1,0 +1,45 @@
+.icon-sobre-2{
+	background-image: url('../img/pedras.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	text-align: center;
+	padding: 40px 0;
+	color: #eee;
+	position: relative;
+	z-index: 10;
+	@media(min-width: map-get($grid-breakpoints,lg)){
+		padding: 40px 20%;
+	}
+	.container-icon-sobre-2{
+		@extend .col-xs-12;
+		@extend .col-md-3;
+		@include flipInX(
+			$duration: 2s
+			);
+		margin-bottom: 4rem; 
+		@media(min-width: map-get($grid-breakpoints,md)){
+			margin-bottom: 0; 
+		}
+		.fa{
+			color: #fcca03;
+			font-size: 2rem;
+		}
+		.valor-icon{
+			margin-bottom: 0;
+   			margin-top: 5px;
+    		font-size: 1.5rem;
+    		letter-spacing: 1px;
+		}
+		.d-icon{
+			font-size: .7rem;
+			margin-bottom: 5px;
+		}
+		.tracinho-icon{
+			width: 50px;
+			border-bottom: 1px solid #fcca03;
+			margin: 0 auto;
+		}
+
+	}
+}

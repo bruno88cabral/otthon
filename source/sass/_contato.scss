@@ -1,0 +1,158 @@
+.contato{
+	padding: 20px 0;
+	.titulo-contato{
+		color: #000;
+		text-align: center;
+    	font-size: 1.5rem;
+    	font-weight: bold;
+    	text-transform: uppercase;
+    	@include bounceInRight(
+			$duration: 1s
+    		);
+	}
+	.tracinho-contato{
+		margin: 10px auto;
+    	border-bottom: solid 6px #008fcb;
+    	width: 40px;
+    	@include bounceInRight(
+			$duration: 1s
+    		);
+	}
+	.p-contato{
+		font-size: .8rem;
+    	text-align: center;
+    	margin-bottom: 0;
+    	@include bounceInRight(
+			$duration: 1s
+    		);
+	}
+	.row{
+		@media(min-width: map-get($grid-breakpoints,lg)){
+			padding: 40px 0;
+		}
+		.box-contato{
+			@extend .col-xs-12;
+			@extend .col-md-6;
+			@extend .col-lg-3;
+			margin-bottom: 30px;
+			padding: 0 25px;
+			@include zoomIn();
+			&:first-child{
+				margin-top: 30px;
+			}
+			&:nth-child(2){
+				@media(min-width: map-get($grid-breakpoints,md)){
+					margin-top: 30px;
+				}	
+			}
+			@media(min-width: map-get($grid-breakpoints,lg)){
+				margin-top: 30px;
+				padding-left: 0;
+			}
+			.icon-contato{
+				@extend .col-xs-2;
+				@extend .col-lg-2;
+				border: 2px solid #ddd;
+				border-radius: 50%;
+				text-align: center;				
+				padding: 10px 0;
+				@media(min-width: map-get($grid-breakpoints,md)){
+					padding: 12px 0;
+				}
+				@media(min-width: map-get($grid-breakpoints,lg)){
+					padding: 8px 0;
+				}
+				@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+					padding: 4px 0;
+				}
+				.fa{
+					color: #fcca03;
+				}
+			}
+			.icon-texto{
+				@extend .col-xs-10;
+				@extend .col-lg-10;
+				.icon-titulo{
+					font-size: 1rem;
+    				font-weight: bold;
+    				@media(min-width: map-get($grid-breakpoints,md)){
+						font-size: .7rem;;
+					}
+    				@media(min-width: map-get($grid-breakpoints,lg)){
+						font-size: .85rem;
+					}
+				}
+				.p-icon{
+					font-size: .8rem;
+    				color: #ccc;
+    				margin-bottom: 0;
+    				@media(min-width: map-get($grid-breakpoints,md)){
+						font-size: .65rem;
+					} 
+    				@media(min-width: map-get($grid-breakpoints,lg)){
+						font-size: .75rem;
+					}
+				}
+			}
+		}
+	}
+}
+.form-contato{
+	padding: 40px 0 60px 0;
+	text-align: center;
+		@media(min-width: map-get($grid-breakpoints,lg)){
+			width: 80%;
+    		margin: 0 auto;
+		}	
+	.p-contato{
+		font-size: .8rem;
+		@media(min-width: map-get($grid-breakpoints,lg)){
+			margin-bottom: 5%;
+		}    		
+	}
+	.titulo-contato{
+		color: #000;
+    	font-size: 1.2rem;
+    	font-weight: bold;
+    	text-transform: uppercase;
+    	margin: 30px auto 10px auto;
+	}
+	.tracinho-contato{
+		margin: 10px auto 50px auto;
+    	border-bottom: solid 6px #fcca03;
+    	width: 40px;
+	}
+	.box-input{
+		@extend .col-xs-12;
+		@extend .col-lg-4;
+		&:nth-child(4){
+			width: 100%;
+		}
+		margin-bottom: 1rem;
+		.input-contato{
+			width: 100%;
+			border: 1px #ddd solid;
+			padding: 10px;
+			font-size: .8rem;
+		}		
+	}
+	.input-enviar{
+		background: none;
+		background-color: #fcca03;
+		border: none;
+		width: 80%;
+		padding: 10px 0;
+		font-size: .8rem;
+		color: #fff;
+		border: solid 1px transparent;
+		@include transition (.3s);
+		@media(min-width: map-get($grid-breakpoints,lg)){
+			width: 40%;
+		}
+		&:hover{
+			background-color: #fff;
+    		color: #fcca03;
+    		border: solid 1px #fcca03;
+		}
+	} 
+}

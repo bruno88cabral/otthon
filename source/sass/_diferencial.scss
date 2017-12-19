@@ -1,0 +1,53 @@
+.diferencial{
+	padding: 20px 0;
+	z-index: 10;
+	position: relative;
+	background-color: #ededdd;
+	@media(min-width: map-get($grid-breakpoints,md)){
+		padding: 40px 0;
+	}
+	.titulo-diferencial{
+		color: #000;
+		text-align: center;
+    	font-size: 1.5rem;
+    	font-weight: bold;
+    	text-transform: uppercase;
+	}
+	.tracinho-diferencial{
+		margin: 10px auto;
+    	border-bottom: solid 6px #008fcb;
+    	width: 40px;
+    	@media(min-width: map-get($grid-breakpoints,md)){
+			margin: 10px auto 30px auto;
+		}
+	}
+	.container-diferencial{
+		@extend .col-xs-12;
+		@extend .col-md-6;		
+		@include fadeInLeftBig();
+		&:last-child{
+			@include fadeInRightBig();
+		}
+		.img-diferencial{
+			width: 100%;
+			margin: 1rem 0;
+			@media(min-width: map-get($grid-breakpoints,md)){
+				margin: 0;
+				height: 250px;
+			}
+			@media(min-width: map-get($grid-breakpoints,lg)){
+				height: auto;
+			}
+		}
+		.p-diferencial{
+			margin-bottom: 0;
+			font-size: .9rem;
+			@media(min-width: map-get($grid-breakpoints,md)){
+				font-size: .8rem;
+			}
+			@media(min-width: map-get($grid-breakpoints,lg)){
+				font-size: 1.2rem;
+			}
+		}
+	}
+}

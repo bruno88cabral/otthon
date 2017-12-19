@@ -1,0 +1,27 @@
+.politica{
+	text-align: center;
+	padding: 20px 0;
+	@include bounceInUp();
+	@media(min-width: map-get($grid-breakpoints,md)){
+		padding: 20px 10%;
+	}
+	@media(min-width: map-get($grid-breakpoints,lg)){
+		padding: 50px 15%;
+	}
+	.titulo-politica{
+		color: #000;
+		text-align: center;
+    	font-size: 1.5rem;
+    	font-weight: bold;
+    	text-transform: uppercase;
+	}
+	.tracinho-politica{
+		margin: 10px auto 30px auto;
+    	border-bottom: solid 6px #008fcb;
+    	width: 40px;
+	}
+	.p-politica{
+		font-size: .9rem;
+		margin-bottom: 0;		
+	}
+}

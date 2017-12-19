@@ -1,0 +1,46 @@
+.equipe{
+	background-image: url('../img/nossa-equipe.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: #eee;
+	padding-top: 20px;
+	@media(min-width: map-get($grid-breakpoints,lg)){
+		padding: 100px 20% 0 20%;
+	}	    
+	.container-equipe{
+		@extend .col-xs-12;
+		&:first-child{
+			@extend .col-md-8;
+			@include fadeInDownBig();
+		}
+		&:last-child{
+			@extend .col-md-4;
+			@include fadeInUp();
+		}
+		.titulo-equipe{
+			text-transform: uppercase;
+	    	font-size: 1.5rem;
+	    	font-weight: bold;
+		}
+		.tracinho-equipe{
+			margin: 20px 50% 20px 0;
+	    	border-bottom: solid 6px #008fcb;
+	    	width: 40px;
+		}
+		.p-equipe{
+			margin-bottom: 0;
+			font-size: .9rem;
+			@media(min-width: map-get($grid-breakpoints,lg)){
+				font-size: 1rem;
+			}
+		}
+		.img-equipe{
+			width: 100%;
+			margin-top: 20px;
+			@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+				margin-top: 75%;
+			}
+		}
+	}
+}

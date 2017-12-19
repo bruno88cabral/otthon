@@ -1,0 +1,97 @@
+.nosso-servico{
+	padding: 30px 0;
+	.titulo-home{
+		color: #000;
+		text-align: center;
+    	font-size: 1.5rem;
+    	font-weight: bold;
+    	text-transform: uppercase;
+	}
+	.tracinho{
+		margin: 10px auto;
+    	border-bottom: solid 6px #008fcb;
+    	width: 40px;
+	}
+	.servico-paragrafo{
+		font-size: .8rem;
+    	text-align: center;
+    	margin-bottom: 3rem;
+	}
+	.container-servico{
+		@extend .row;		
+		.card-servico{
+			@extend .col-xs-12;
+			@extend .col-md-4;
+			@include zoomIn(
+				$duration: 2s
+				);
+			margin-bottom: 3rem;
+			&:first-child{		
+				@media(min-width: map-get($grid-breakpoints,md)){
+					.p-card{
+						margin-top: 2rem;
+					}
+					.link-card{
+						display: block;
+   						 margin-top: 3.5rem;
+					}
+				}
+				@media(min-width: map-get($grid-breakpoints,lg)){
+					.p-card{
+						margin-top: 0;
+					}
+					.link-card{
+						display: block;
+   						margin-top: 2.5rem;
+					}
+				}
+			}
+			&:last-child{
+				@media(min-width: map-get($grid-breakpoints,md)){
+					.link-card{
+						display: block;
+   						margin-top: 3.5rem;
+   					}	
+   				}
+   				@media(min-width: map-get($grid-breakpoints,lg)){
+					.link-card{
+						display: block;
+   						 margin-top: 2.5rem;
+   					}	
+   				}
+			}
+			.img-card{
+				width: 100%;
+				max-width: 100%;				
+				@media(min-width: map-get($grid-breakpoints,md)){
+					height: 160px;
+				}
+				@media(min-width: map-get($grid-breakpoints,lg)){
+					height: 220px;
+				}				    
+			}
+			.titulo-card{
+				font-size: 1.3rem;
+				color: #000;
+    			margin: 1rem 0;
+    			text-transform: uppercase;
+    			@media(min-width: map-get($grid-breakpoints,md)){
+					font-size: 1rem;
+				}	
+			}
+			.p-card{
+				color: #999;
+			    font-weight: 500;
+			    line-height: 1.2;
+			    font-size: .9rem;			    
+
+			}
+			.link-card{
+				color: #888;
+    			font-weight: bold;
+    			text-transform: uppercase;
+   				font-size: .75rem;
+			}
+		}
+	}
+}
